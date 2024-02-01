@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "25999754613",
+    "project_id": "fibaconn",
+    "storage_bucket": "fibaconn.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25999754613:android:d982cc9b354820c70f7f3c",
+        "android_client_info": {
+          "package_name": "com.example.fibaconn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwKsY_Q-ZksO802y0CwRxb-jkuE1tUzg8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
