@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:fibaconn/providers/main_provider.dart';
-import 'package:fibaconn/screens/public/pub_imports.dart';
+import 'package:fibaconn/providers/v2.2.0/main_provider.dart';
+import 'package:fibaconn/screens/public/v2.2.0/pub_imports.dart';
 
 void main() {
   runApp(
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Fibaconn App',
       theme: AppTheme(),
-      home: HomePage(title: 'Fibaconn', mobileScreen: 480),
+      home: HomePage(title: 'Fibaconn', mobileScreen: 280),
     );
   }
 

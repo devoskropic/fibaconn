@@ -1,17 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:fibaconn/providers/main_provider.dart';
-import 'package:fibaconn/screens/public/pub_imports.dart';
+import 'package:fibaconn/providers/v2.2.0/main_provider.dart';
+import 'package:fibaconn/screens/public/v2.2.0/pub_imports.dart';
 
 void main() {
-  runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => MainProvider()),
-      ],
-      child: MyApp(),
-    ),
-  );
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -19,10 +12,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Fibaconn App',
-      theme: AppTheme(),
-      home: HomePage(title: 'Fibaconn', mobileScreen: 480),
+    return ChangeNotifierProvider(
+      create: (context) => MainProvider(),
+      child: MaterialApp(
+        title: 'Fibaconn App',
+        theme: AppTheme(),
+        home: HomePage(title: 'Fibaconn', mobileScreen: 280),
+      ),
     );
   }
 

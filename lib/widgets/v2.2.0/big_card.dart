@@ -7,10 +7,11 @@ class BigCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final style = theme.textTheme.displaySmall!.copyWith(
+    final theme = Theme.of(context); //displaySmall!
+    final style = theme.textTheme.headlineSmall!.copyWith(
       color: theme.colorScheme.onPrimary,
     );
+
     return Card(
       color: theme.colorScheme.primary,
       child: Padding(

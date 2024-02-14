@@ -1,1 +1,8 @@
-{}
+{
+   "dart.lineLength": 100,
+   "dart.flutterHotReloadOnSave": "allIfDirty",
+   "dart.flutterRunLogFile": null,
+   "dart.showDartDeveloperLogs": false,
+   "dart.showGettersInDebugViews": false,
+   "dart.showDevToolsDebugToolBarButtons": false
+}
