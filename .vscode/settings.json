@@ -4,5 +4,6 @@
    "dart.flutterRunLogFile": null,
    "dart.showDartDeveloperLogs": false,
    "dart.showGettersInDebugViews": false,
-   "dart.showDevToolsDebugToolBarButtons": false
+   "dart.showDevToolsDebugToolBarButtons": false,
+   "cmake.configureOnOpen": false
 }

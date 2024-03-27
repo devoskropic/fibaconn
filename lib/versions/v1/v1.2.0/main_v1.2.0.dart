@@ -1,8 +1,8 @@
-import 'package:fibaconn/widgets/imports.dart';
 import 'package:flutter/material.dart';
-import 'package:english_words/english_words.dart';
 import 'package:provider/provider.dart';
+import 'package:english_words/english_words.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:fibaconn/versions/v1/v1.2.0/big_card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -84,7 +84,7 @@ class MyHomePage extends StatelessWidget {
           Expanded(
             child: Container(
               color: Theme.of(context).colorScheme.primaryContainer,
-              child: GeneratorPage(),
+              child: WordGeneratorPage(),
             ),
           ),
         ],
@@ -133,7 +133,7 @@ class NavyRail extends StatelessWidget {
   }
 }
 
-class GeneratorPage extends StatelessWidget {
+class WordGeneratorPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var appState = context.watch<MyAppState>();

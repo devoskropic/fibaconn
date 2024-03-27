@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fibaconn/widgets/v2.2.0/imports.dart';
+import 'package:fibaconn/versions/v2/v2.1.0/widgets/imports.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 

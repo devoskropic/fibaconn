@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:fibaconn/widgets/imports.dart'; //fot big_card.dart only
-import 'package:english_words/english_words.dart';
 import 'package:provider/provider.dart';
+import 'package:english_words/english_words.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:fibaconn/versions/v1/v1.2.0/big_card.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,19 +18,23 @@ class MyApp extends StatelessWidget {
       create: (context) => MyAppState(),
       child: MaterialApp(
         title: 'Fibaconn App',
-        theme: ThemeData(
-          // primarySwatch: Colors.blue,
-          appBarTheme: AppBarTheme(
-            iconTheme: IconThemeData(color: Color.fromRGBO(0, 0, 0, 0)),
-            color: Colors.deepPurpleAccent,
-            titleTextStyle: TextStyle(color: Colors.white, fontSize: 22),
-            elevation: 5,
-          ),
-          useMaterial3: true,
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
-        ),
+        theme: AppTheme(),
         home: const MyHomePage(title: 'Fibaconn'),
       ),
+    );
+  }
+
+  ThemeData AppTheme() {
+    return ThemeData(
+      // primarySwatch: Colors.blue,
+      appBarTheme: AppBarTheme(
+        iconTheme: IconThemeData(color: Color.fromRGBO(0, 0, 0, 0)),
+        color: Colors.deepPurpleAccent,
+        titleTextStyle: TextStyle(color: Colors.white, fontSize: 22),
+        elevation: 5,
+      ),
+      useMaterial3: true,
+      colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
     );
   }
 }
@@ -109,7 +113,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-// Extract to external files at new version
+// TO DO: Extract to external files at new version
 class NavyRail extends StatelessWidget {
   const NavyRail({
     super.key,

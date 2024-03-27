@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fibaconn/widgets/imports.dart';
-// import 'package:line_icons/line_icons.dart';
-// import 'package:google_nav_bar/google_nav_bar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title, required this.mobileScreen});
@@ -14,12 +12,12 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   var selectedIndex = 0;
-  // var mobScreen = 280;
   Widget page = Placeholder();
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
+
     switch (selectedIndex) {
       case 0:
         page = WordGenerator();
@@ -45,7 +43,9 @@ class _HomePageState extends State<HomePage> {
     return LayoutBuilder(
       builder: (context, constraints) {
         return Scaffold(
+          // extendBodyBehindAppBar: true,
           appBar: AppBar(title: Text(widget.title)),
+          drawer: AppDrawer(),
           body: constraints.maxWidth < widget.mobileScreen
               ? Column(
                   // Cellphone screen

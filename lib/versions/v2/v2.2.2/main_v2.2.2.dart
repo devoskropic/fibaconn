@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:fibaconn/providers/main_provider.dart';
-// import 'package:fibaconn/screens/pub_imports.dart';
-import 'package:fibaconn/widgets/drawer/drawer_item.dart';
-import 'package:fibaconn/widgets/drawer/home_stateful_drawer.dart';
-// import 'package:fibaconn/widgets/drawer/home_stateful_drawer_copy.dart';
+import 'package:fibaconn/versions/v2/v2.2.1/providers/main_provider.dart';
+import 'package:fibaconn/versions/v2/v2.2.2/home_page.dart';
+// import 'package:fibaconn/widgets/drawer/home_stateful_drawer.dart';
 
 void main() {
   runApp(
@@ -25,12 +23,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Fibaconn App',
       theme: AppTheme(),
-      // home: HomeStatefulDrawerCopy(),
-      home: HomeStatefulDrawer(
-        selectedIndex: 0,
-        drawerItem: DrawerItem("Home", Icons.home),
-      ),
-      // home: HomePage(title: 'Fibaconn', mobileScreen: 480),
+      home: HomePage(title: 'Fibaconn', mobileScreen: 480),
+      // home: HomeStatefulDrawer(),
       debugShowCheckedModeBanner: false,
     );
   }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:fibaconn/providers/main_provider.dart';
-import 'package:fibaconn/screens/public/pub_imports.dart';
+import 'package:fibaconn/versions/v2/v2.1.0/providers/main_provider.dart';
+import 'package:fibaconn/versions/v2/v2.2.0/home_page.dart';
 
 void main() {
   runApp(

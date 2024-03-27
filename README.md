@@ -3,7 +3,7 @@
 A project for Firebase projects testing
 By Devoskropic through 207 Labz
 
-## Getting Started -Notes- [^1].
+## Getting Started -Notes- [^1]. 
 
 On past projects ( wbsports and authapp) I've been learning on how to use Authentication plugin (firebase_auth), now is the turn to keep using it and expand to others.
 
@@ -11,19 +11,24 @@ Quick start guide: [non-official starting guide](https://medium.com/@rehmaankhan
 
 Before implementing firebase plugins, I'll make the app a bit bigger, in this case I'm going to implement the [google codelab](https://codelabs.developers.google.com/codelabs/flutter-codelab-first#0) related to the first flutter application, but instead of making it for desktop, I'll do it for cellphones and of course not following exactly the tutorial, but adding some more stuff. 
 
-## Change Log - Version History [^2].
+## Change Log - Version History [^2]. 
 
   - main.dart current version [2.2.1]
 
 ### Ver 2 
 
-  - mainv2.2.1.dart
+  - main_v2.2.2.dart
+  
+    - app_drawer.dart [nwidget]
+    - home_page.dart [nf]
+
+  - main_v2.2.1.dart
   
     - new main
     - main_provider [nf]
     - home_page [nf]
     - word_generator [nf]
-    - added history_list_view 
+    - added history_list_view
     - big_card [nf]
     - fav_words [nf]
 
@@ -39,7 +44,7 @@ Before implementing firebase plugins, I'll make the app a bit bigger, in this ca
     - FavsPage now is FavWords @widgets.
     - NavyRail now is located @widgets.
 
-### Ver 1
+### Ver 1 
 
   - main_v1.3.0.dart
 
@@ -57,14 +62,30 @@ Before implementing firebase plugins, I'll make the app a bit bigger, in this ca
 
   - main_v1.0.1.dart
 
-    - stateless widget.
-    - next word and favorite buttons added into a Column: first shows the card, then a row containing both buttons Favs and Next.
-    - no navRail or bottomNavBar.
+    - Stateless widget.
+    - Next word and favorite buttons added into a Column: first shows the card, then a row containing both buttons Favs and Next.
+    - No navRail or bottomNavBar.
+
+
+## Journal 
+
+### 27 Mar 2024
+- All files related to stateful drawer was copied to Sueltos project, soon I'll remove them from here.
+
+### 23 Mar 2024
+- Discovered that my personal implementation of stateful drawer can skip the setState() method inside onSelectedItem method invokated after tapping an option of the drawer, so, maybe I'll go and try to set back this widget to an stateless type.
+
+- That happened after setting selectedIndex parameter as final, and discovered widget.selectedIndex was unable to change due it's final restriction.
+
+
+### 19 Mar 2024
+- I've been doing lots of experiments trying to add the drawer and making sure it could keep it's state like selected option and switch between screens without losing the list of the favorite words, and in the process I discovered that my file organization in the version folder was a mess, so I corrected it.
+
+- For drawer purposes I also added a new group of files (all of them inside lib/widgets/drawer folder), a type of homescreen and stuff to add easily options for the drawer, but I think it has a mistake on which widgets is stateless and which one is stateful, I think I did it the other way, anyway, at this point it works but for didactical purposes I'm gonna add new files and switch the types of widgets stateless-stateful and see how it works, and after that I must apply that logic to the original files of this project and finally move/migrate the experimental drawer files to the 'sueltos' app.
+
 
 ### 13 Feb 2024
-- I've made a lot of corrections and defined how is the project going to be structured, decided to create diferent main and its links to rest of files that could let me
-generate the build of any version of it, since then now I'm going to track at least the changes of each file in this file, and maybe inside the respective file lead by a comment.
-So at this point, every folder corresponding to a specific version will be related to old main file, and until now the curent version is 2.2.1 so, anything older at this point would be related to files corresponding on folders v2.2.0.
+- I've made a lot of corrections and defined how is the project going to be structured, decided to create diferent main and its links to rest of files that could let me generate the build of any version of it, since then now I'm going to track at least the changes of each file in this file, and maybe inside the respective file lead by a comment. So at this point, every folder corresponding to a specific version will be related to old main file, and until now the curent version is 2.2.1 so, anything older at this point would be related to files corresponding on folders v2.2.0.
 
 
 ### 03 Feb 2024

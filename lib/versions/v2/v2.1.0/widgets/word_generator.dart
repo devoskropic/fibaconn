@@ -1,7 +1,7 @@
-import 'package:fibaconn/widgets/v2.2.0/imports.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:fibaconn/providers/v2.2.0/main_provider.dart';
+import 'package:fibaconn/versions/v2/v2.1.0/widgets/imports.dart';
+import 'package:fibaconn/versions/v2/v2.1.0/providers/main_provider.dart';
 import 'package:line_icons/line_icons.dart';
 
 class WordGenerator extends StatelessWidget {
