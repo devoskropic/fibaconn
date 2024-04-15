@@ -17,6 +17,14 @@ Before implementing firebase plugins, I'll make the app a bit bigger, in this ca
 
 ### Ver 2 
 
+  - main_v2.3.0.dart
+
+    - main now has listTileTheme, subMain was used to check/test alone the wg and fav widgets 
+    - home_page:
+      - _onDrawerItemSelected aded to setState of drawer item selected
+      - AppDrawer now takes selectedIndex and onTap above method as parameters
+    - The app_drawer ended stateless while homePage remains stateful, the drawer switches between fav and wg widgets inside home_page at the moment , but in the future the drawer will be linked only to additional option like settings or similar, with no selectedIndex highlighted since its destination will have an Scaffold followed by the traditional leading option that takes user back to previous screen.
+
   - main_v2.2.2.dart
   
     - app_drawer.dart [nwidget]
@@ -68,6 +76,9 @@ Before implementing firebase plugins, I'll make the app a bit bigger, in this ca
 
 
 ## Journal 
+
+### 15 Apr 2024
+- 
 
 ### 27 Mar 2024
 - All files related to stateful drawer was copied to Sueltos project, soon I'll remove them from here.

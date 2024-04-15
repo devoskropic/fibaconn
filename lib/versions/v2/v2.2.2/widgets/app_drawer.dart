@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:fibaconn/screens/home_page.dart';
-import 'package:fibaconn/widgets/drawer/menu_options.dart';
+import 'package:fibaconn/versions/v2/v2.2.2/home_page.dart';
+import 'package:fibaconn/versions/v2/v2.2.2/widgets/imports.dart';
 
 class AppDrawer extends StatelessWidget {
   const AppDrawer({super.key});
@@ -55,7 +55,7 @@ class AppDrawer extends StatelessWidget {
             Navigator.pop(context);
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context) => const HomePage(
+                builder: (context) => HomePage(
                   title: "Home",
                   mobileScreen: 550,
                 ),
@@ -71,7 +71,7 @@ class AppDrawer extends StatelessWidget {
             Navigator.pop(context);
             Navigator.of(context).push(
               MaterialPageRoute(
-                builder: (context) => const HomePage(
+                builder: (context) => HomePage(
                   title: "Favorites",
                   mobileScreen: 550,
                 ),
