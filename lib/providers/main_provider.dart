@@ -4,6 +4,7 @@ import 'package:english_words/english_words.dart';
 class MainProvider extends ChangeNotifier {
   //New word pair
   var current = WordPair.random();
+
   void getNext() {
     // v2.2.1 starts
     history.insert(0, current);

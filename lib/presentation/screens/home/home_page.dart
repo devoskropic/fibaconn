@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:fibaconn/widgets/imports.dart';
+import 'package:fibaconn/presentation/widgets/imports.dart';
+import 'package:fibaconn/presentation/screens/home/widgets/app_drawer.dart';
+import 'package:fibaconn/presentation/screens/home/widgets/navy_rail.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key, required this.title, required this.mobileScreen});
   final String title;
   final int mobileScreen;
+
+  const HomePage({super.key, required this.title, required this.mobileScreen});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -14,7 +17,7 @@ class _HomePageState extends State<HomePage> {
   var _selectedIndex = 0;
   Widget _widgetView = Placeholder();
 
-  _onDrawerItemSelected(int index) {
+  _onItemSelected(int index) {
     setState(() {
       _selectedIndex = index;
     });
@@ -37,6 +40,7 @@ class _HomePageState extends State<HomePage> {
 
     // v2.2.1 starts
     var colorScheme = theme.colorScheme;
+
     var mainArea = ColoredBox(
       color: colorScheme.surfaceVariant,
       child: AnimatedSwitcher(
@@ -53,15 +57,13 @@ class _HomePageState extends State<HomePage> {
           appBar: AppBar(title: Text(widget.title)),
           drawer: AppDrawer(
             selectedIndex: _selectedIndex,
-            onTap: _onDrawerItemSelected,
+            onTap: _onItemSelected,
           ),
           body: constraints.maxWidth < widget.mobileScreen
               ? Column(
                   // Cellphone screen
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Expanded(child: mainArea),
-                  ],
+                  children: [Expanded(child: mainArea)],
                 )
               : Row(
                   // Big screens
@@ -72,11 +74,12 @@ class _HomePageState extends State<HomePage> {
                         selectedIndex: _selectedIndex,
                         theme: theme,
                         constraints: constraints,
-                        onDestinationSelected: (int) {
-                          setState(() {
-                            _selectedIndex = int;
-                          });
-                        },
+                        onDestinationSelected: _onItemSelected,
+                        // (int) {
+                        //   setState(() {
+                        //     _selectedIndex = int;
+                        //   });
+                        // },
                       ),
                     ),
                     const VerticalDivider(thickness: 1, width: 1),
@@ -96,11 +99,12 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ],
                   currentIndex: _selectedIndex,
-                  onTap: (value) {
-                    setState(() {
-                      _selectedIndex = value;
-                    });
-                  },
+                  onTap: _onItemSelected,
+                  // (value) {
+                  //   setState(() {
+                  //     _selectedIndex = value;
+                  //   });
+                  // },
                 )
               : null,
         );

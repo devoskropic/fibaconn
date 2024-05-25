@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:fibaconn/widgets/imports.dart';
+import 'package:fibaconn/presentation/widgets/imports.dart';
+import 'package:fibaconn/presentation/screens/home/widgets/app_drawer.dart';
+import 'package:fibaconn/presentation/screens/home/widgets/navy_rail.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key, required this.title, required this.mobileScreen});

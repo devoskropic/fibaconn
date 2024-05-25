@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fibaconn/widgets/menu_options.dart';
+import 'package:fibaconn/presentation/widgets/menu_options.dart';
 
 class AppDrawer extends StatelessWidget {
   final int selectedIndex;

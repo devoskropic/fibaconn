@@ -77,8 +77,8 @@ Before implementing firebase plugins, I'll make the app a bit bigger, in this ca
 
 ## Journal 
 
-### 15 Apr 2024
-- 
+### 25 May 2024
+- Not sure on which day on this month I did a little refactor
 
 ### 27 Mar 2024
 - All files related to stateful drawer was copied to Sueltos project, soon I'll remove them from here.

@@ -1,4 +1,4 @@
-import 'package:fibaconn/widgets/imports.dart';
+import 'package:fibaconn/presentation/widgets/imports.dart';
 import 'package:flutter/material.dart';
 
 class SubMain extends StatelessWidget {

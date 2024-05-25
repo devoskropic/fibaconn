@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:fibaconn/providers/main_provider.dart';
 import 'package:line_icons/line_icons.dart';
-import 'package:fibaconn/widgets/imports.dart';
+import 'package:fibaconn/presentation/widgets/imports.dart';
 
 class WordGenerator extends StatelessWidget {
+
+  
   @override
   Widget build(BuildContext context) {
     var appState = context.watch<MainProvider>();

@@ -4,7 +4,7 @@ import 'package:fibaconn/providers/main_provider.dart';
 import 'package:line_icons/line_icons.dart';
 
 class FavWords extends StatelessWidget {
-  // const FavWords({super.key});
+  const FavWords({super.key});
 
   @override
   Widget build(BuildContext context) {
